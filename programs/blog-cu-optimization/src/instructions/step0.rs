@@ -52,7 +52,7 @@ pub fn handler(ctx: Context<Step0>) -> Result<()> {
     ctx.accounts.counter.user = *ctx.accounts.random_pubkey.to_account_info().key;
     ctx.accounts.counter.bump = ctx.bumps.counter;
 
-    msg!("Counter random pubey: {}", ctx.accounts.user.key());
+    msg!("Counter random pubkey: {}", ctx.accounts.user.key());
 
     // transfer tokens
     transfer_checked(

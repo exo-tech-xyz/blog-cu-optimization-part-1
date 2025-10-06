@@ -171,7 +171,7 @@ describe("blog-cu-optimization", () => {
           systemProgram: anchor.web3.SystemProgram.programId,
         })
         .simulate();
-      logCUs("Without checking seeds: ", tx5);
+      logCUs("With random pubkey as an argument: ", tx5);
 
       const tx6 = await program.methods
         .step6(randomPubkey)

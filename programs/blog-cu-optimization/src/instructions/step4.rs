@@ -55,7 +55,7 @@ pub fn handler(ctx: Context<Step4>) -> Result<()> {
     ctx.accounts.counter.user = *ctx.accounts.random_pubkey.to_account_info().key;
     ctx.accounts.counter.bump = 1; // placeholder
 
-    msg!("Counter random pubey: {}", ctx.accounts.user.key());
+    msg!("Counter random pubkey: {}", ctx.accounts.user.key());
 
     let decimals = ctx.accounts.mint.data.borrow()[44];
 
